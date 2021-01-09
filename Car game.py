@@ -1,11 +1,8 @@
 from display import help_screen
 
-
 def menu():
     print("select what you wanna do")
     return input("==== P)lay   H)elp   Q)uit ===")
-
-
 def game_():
     started = False  # initially the car is stopped.
     for chance in range(1):
@@ -34,8 +31,7 @@ def game_():
                         print("Car started... too smoky anyway. go! \n")  # car is now started
 
                     ''' This is where I'll write the code to be executed when the car engine is started
-
-    '''
+ '''
                 elif command == "STOP":  # checks if player enters 'STOP'
                     if not started:  # executed when the car is stopped. ie started=False
                         print("Hey ", name,
@@ -56,8 +52,6 @@ def game_():
         else:  # if player selects a car from nowhere. ie car not in the list of available cars.
             print("INVALID CAR SELECTION. ", name, " PLEASE TRY AGAIN")  # alert for an invalid selection and
             break  # the game automatically exits.
-
-
 def main():
     done = False
 
@@ -69,6 +63,4 @@ def main():
             help_screen()
         elif choice == "Quit" or choice == "quit":
             done = True
-
-
 main()
