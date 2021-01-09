@@ -1,15 +1,10 @@
 
-
 class Car_Engine:
-
-
     def player_message(self):
         print("|**************************************|")
         print("please follow the instructions carefully")
 
     def game_(self):
-
-
         started = False  # initially the car is stopped.
         for chance in range(1):
             # you are given only one chance to set your name.
@@ -36,9 +31,7 @@ class Car_Engine:
                             started = True  # since the player entered 'START' and the car is stopped, we need to convert "started" bool to True
                             print("Car started... too smoky anyway. go! \n")  # car is now started
 
-                        ''' This is where I'll write the code to be executed when the car engine is started
-
-        '''
+                        ''' This is where I'll write the code to be executed when the car engine is started '''
                     elif command == "STOP":  # checks if player enters 'STOP'
                         if not started:  # executed when the car is stopped. ie started=False
                             print("Hey ", name,
@@ -59,11 +52,7 @@ class Car_Engine:
             else:  # if player selects a car from nowhere. ie car not in the list of available cars.
                 print("INVALID CAR SELECTION. ", name, " PLEASE TRY AGAIN")  # alert for an invalid selection and
                 break  # the game automatically exits.
-
-
 # create instance of car engine
 player = Car_Engine()
-
-
 player.player_message()
 player.game_()
